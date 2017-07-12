@@ -1,0 +1,44 @@
+#{extends 'isUser.html' /} #{set title:book?book.title:messages.get('Book') /}
+
+#{if book}
+<div id="book">
+    <h1>${book.title}</h1>
+
+    <h3>&{'author'}</h3>
+    <p>${book.author}</p>
+
+    <h3>&{'genre'}</h3>
+    <p>${book.genre}</p>
+
+    <h3>&{'releaseDate'}</h3>
+    <p>${book.releaseDate.format('yyyy-MM-dd')}</p>
+
+    <h3>&{'number'}</h3>
+    <p>${book.number}</p>
+
+    <h3>&{'retelling'}</h3>
+    <p>${book.retelling}</p>
+
+    <h3>&{'readers'}</h3>
+    #{if book.readers}
+    <ul>
+        #{list items:book.readers, as:'reading'}
+        <li>${reading.fullname}</li>
+        #{/list}
+    </ul>
+    #{/if}
+    #{else} <p>&{'readers.isEmpty'}</p> #{/else}
+
+    <h3>&{'haveRead'}</h3>
+    #{if book.haveRead}
+    <ul>
+        #{list items:book.haveRead, as:'read'}
+        <li>${read.fullname}</li>
+        #{/list}
+    </ul>
+    #{/if}
+    #{else} &{'haveRead.isEmpty'} #{/else}
+
+    #{if book.number>0} <p><a href="@{Library.takeBook(book.id)}"><button>Взять</button></a></p> #{/if}
+</div>
+#{/if}#{else}<p>&{'book.notFound'}</p>#{/else}

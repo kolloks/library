@@ -1,0 +1,34 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Import Secure routes
+*       /                                       module:secure
+
+# Administration
+GET     /admin/?                                Admin.index
+*       /admin                                  module:crud
+
+# Page
+GET     /                                       Application.index
+
+GET     /book                                   Application.book
+
+GET     /books                                  Application.books
+
+GET     /take                                   Library.takeBook
+
+GET     /return                                 Library.returnBook
+
+GET     /signup                                 Security.signup
+
+POST    /signup                                 Security.signupPost
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

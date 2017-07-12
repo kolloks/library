@@ -1,0 +1,16 @@
+#tools {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    right: 20px;
+    font-size:18pt;
+}
+
+#tools a {
+    color: white;
+
+    text-decoration: none;
+}

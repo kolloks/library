@@ -1,0 +1,114 @@
+body {
+	font-family: Arial, Sans;
+	font-size: 90%;
+	width: 800px;
+	margin: 1em auto;
+	height-min: 1040px;
+}
+
+tr {
+    border: none;
+}
+
+table {
+    margin: 10px;
+    padding: 2px;
+    border-radius: 15px;
+}
+
+td {
+    border-bottom: #888 solid 2px;
+    padding: 5px;
+    text-align:center;
+}
+
+fieldset {
+	border: 1px solid #888;
+	margin-bottom: 1em;
+}
+
+legend {
+	font-weight: bold;
+}
+
+label {
+	display: block;
+	width: 200px;
+	float: left;
+	cursor: pointer;
+}
+
+input[type=text], input[type=password] {
+	border: 1px solid #aaa;
+	float: left;
+	margin-right: 5px;
+}
+
+.field {
+	clear: both;
+	margin-bottom: 2px;
+}
+
+.infos {
+	color: #666;
+	margin-bottom: 5px;
+}
+
+.error {
+	color: #c00;
+}
+
+.hasError {
+	background: pink;
+}
+
+#is_user {
+    float: right;
+    font-size: 16px;
+    border: solid 2px #999999;
+    padding: 0 7px;
+    background: #f8f8f8;
+    margin-top:15px;
+}
+
+#is_user button{
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+#book {
+    font-size: 16px;
+}
+
+#header {
+    border-bottom: solid 2px #999999;
+    background: #f8f8f8;
+    max-height: 200px;
+    height: 35px;
+}
+
+#header ul li {
+	float: left;
+	border-right: solid 1px #999999;
+	list-style: none;
+	font-size: 14px;
+    color: #6666ff; /*цвет ссылок*/
+    font-weight: bold;
+    display: block;
+    line-height: 35px;
+    padding: 0 7px;
+}
+
+#header a {
+    text-decoration: none;
+}
+
+footer {
+	text-align: center;
+	border-top: solid 2px #999999;
+	margin-top: 10px;
+}
+
+footer a {
+    margin-right:10px;
+}

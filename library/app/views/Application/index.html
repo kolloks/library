@@ -1,0 +1,32 @@
+#{extends 'isUser.html' /} #{set title:messages.get('index') /}
+
+<h1>&{'book.Found'}</h1>
+#{if books}
+<div id="books">
+    <table>
+        <thead>
+        <tr>
+            <th>&{'title'}</th>
+            <th>&{'author'}</th>
+            <th>&{'genre'}</th>
+            <th>&{'releaseDate'}</th>
+            <th>&{'number'}</th>
+        </tr>
+        </thead>
+        <tbody>
+        #{list items:books, as:'book'}
+        <tr>
+            <td>${book.title}</td>
+            <td>${book.author}</td>
+            <td>${book.genre}</td>
+            <td>${book.releaseDate.format('yyyy-MM-dd')}</td>
+            <td>${book.number}</td>
+            <td><a href="@{Application.book(book.id)}"><button>&{'form.readMore'}</button></a></td>
+        </tr>
+        #{/list}
+        </tbody>
+    </table>
+</div>
+#{/if}#{else}<p>&{'book.notFound'}</p>#{/else}
+
+

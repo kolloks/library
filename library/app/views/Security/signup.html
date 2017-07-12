@@ -1,0 +1,66 @@
+#{extends 'main.html' /}
+#{set title:messages.get('user.signup') /}
+
+<h2>&{'user.signup'}</h2>
+
+#{ifErrors}
+<div class="error">
+    <h2>&{'crud.hasErrors'}</h2>
+    <ul>
+        #{errors}
+        <li>${error}</li>
+        #{/errors}
+    </ul>
+</div>
+#{/ifErrors}
+
+#{jQueryValidate class:models.User.class, key:'user' /}
+#{form @Security.signupPost(), method:'POST'}
+<div id="login">
+    <fieldset>
+        <legend>&{'user.informations'}</legend>
+
+        #{field 'user.email'}
+        <div class="field">
+            <label for="${field.id}">&{'email'}: </label>
+            <input id="${field.id}" type="text" name="${field.name}" value="${field.value}" class="${field.errorClass}" />
+            <span class="error">${field.error}</span>
+        </div>
+        #{/field}
+        #{field 'user.fullname'}
+        <div class="field">
+            <label for="${field.id}">&{'fullname'}: </label>
+            <input id="${field.id}" type="text" name="${field.name}" value="${field.value}" class="${field.errorClass}" />
+            <span class="error">${field.error}</span>
+        </div>
+        #{/field}
+        #{field 'user.password'}
+        <div class="field">
+            <label for="${field.id}">&{'password'}: </label>
+            <input id="${field.id}" type="password" name="${field.name}" value="${field.value}" class="${field.errorClass}" />
+            <span class="error">${field.error}</span>
+        </div>
+        #{/field}
+        #{field 'user.passwordConfirm'}
+        <div class="field">
+            <label for="${field.id}">&{'confirmPassword'}: </label>
+            <input id="${field.id}" type="password" name="${field.name}" value="${field.value}" class="${field.errorClass}" />
+            <span class="error">${field.error}</span>
+        </div>
+        #{/field}
+    </fieldset>
+
+    <fieldset>
+        <legend>&{'user.conditions'}</legend>
+        #{field 'user.termsOfUse'}
+        <div class="field">
+            <label for="${field.id}">&{'user.accept.terms'}: </label>
+            <input id="${field.id}" type="checkbox" value="true" name="user.termsOfUse" #{if field.value}checked="true"#{/if}  class="${field.errorClass}" />
+            <span class="error">${field.error}</span>
+        </div>
+        #{/field}
+    </fieldset>
+
+    <input type="submit" class="submit" value="&{'form.submit'}" />
+</div>
+#{/form}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.dmnoky</groupId>
+    <artifactId>com.dmnoky.library</artifactId>
+    <name>library</name>
+    <version>0.0.1</version>
+    <packaging>play1.2.5</packaging>
+
+    <parent>
+        <groupId>com.dmnoky</groupId>
+        <artifactId>com.dmnoky.solution</artifactId>
+        <version>0.0.1</version>
+    </parent>
+
+    <properties>
+        <play.version>1.2.5.6</play.version>
+    </properties>
+
+    <build>
+        <sourceDirectory>${basedir}/app</sourceDirectory>
+        <testSourceDirectory>${basedir}/test</testSourceDirectory>
+        <resources>
+            <resource>
+                <directory>${basedir}/conf</directory>
+            </resource>
+            <resource>
+                <directory>${basedir}</directory>
+                <includes>
+                    <include>public/**</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+</project>

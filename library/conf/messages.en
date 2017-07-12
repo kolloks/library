@@ -1,0 +1,41 @@
+index=Library
+adminPage=Service
+# Book
+title=Title
+author=Author
+genre=Genre
+releaseDate=Date of release
+retelling=Retelling
+number=Number
+readers=Read now
+haveRead=Have read
+book.notFound=Books not found
+book.Found=Available books
+book.take=Take book
+book.return=Return book
+# User
+email=Email
+password=Password
+сonfirmЗassword=Confirm password
+fullname=Full name
+readingBooks=Reading books
+readedBooks=Read books
+isAdmin=User is admin
+# CRUD Controllers/html
+haveRead.isEmpty=This book has not yet been read
+readers.isEmpty=No readers yet
+# Principal
+user.welcome=Welcome &{%s}!
+user.anonymous=Guest
+user.login=Sign in
+user.logout=Log out
+user.signup=Sign up
+user.need.authorization=Please, log in
+user.accept.terms=I accept terms of use
+user.informations=User informations
+user.conditions=Conditions
+# Form
+form.submit=Send
+form.take=Take
+form.readMore=Read more
+form.return=Return

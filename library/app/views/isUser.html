@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+
+<div id="is_user">
+    <p>&{'user.welcome', user?user.fullname:'user.anonymous'}
+        #{if user}
+            <a href="@{Secure.logout()}"><button>&{'user.logout'}</button></a>
+        #{/if}
+        #{else}
+            <a href="@{Secure.login()}"><button>&{'user.login'}</button></a>
+            <a href="@{Security.signup()}"><button>&{'user.signup'}</button></a>
+        #{/else}
+    </p>
+</div>
+#{doLayout /}
